@@ -27,8 +27,9 @@ namespace CrossFitSiili
                   defaults: new { controller = "Home", action = "Index" }
                   );
             });
-
+            app.UseDefaultFiles(new Microsoft.AspNet.StaticFiles.DefaultFilesOptions() { DefaultFileNames = new[] { "index.html" } });
             app.UseStaticFiles();
+            
         }
 
         // Entry point for the application.
