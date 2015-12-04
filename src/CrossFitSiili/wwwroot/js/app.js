@@ -35,7 +35,6 @@ cfsiili.controller('wodController', ['$scope','$http', function ($scope,$http) {
     $scope.wods = [];
     $scope.isCreating = false;
     
-
     $http.get("/api/wods")
        .then(function (response) {
            angular.copy(response.data, $scope.wods);

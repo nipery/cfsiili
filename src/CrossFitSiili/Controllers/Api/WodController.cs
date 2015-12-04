@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
-using CrossFitSiili.Models;
 using CrossFitSiili.Repository;
+using CrossFitSiili.ViewModels;
 using Microsoft.AspNet.Mvc;
-using Microsoft.Data.Entity;
 
 namespace CrossFitSiili.Controllers.Api
 {
@@ -36,13 +34,16 @@ namespace CrossFitSiili.Controllers.Api
         }
 
         [HttpPost("")]
-        public async Task<JsonResult> Post([FromBody] Wod wod)
+        public async Task<JsonResult> Post([FromBody]WodViewModel wodViewModel)
         {
-            if (wod == null) return Json(false);
-
-            await _wodRepository.AddWod(wod);
-           
-            return Json(true);
+            if (ModelState.IsValid)
+            {
+                Response.StatusCode = (int)HttpStatusCode.Created;
+                return await Task.FromResult(Json(true));
+                //  await _wodRepository.AddWod(wod);
+            }
+            Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            return Json(false);
         }
     }
 }
