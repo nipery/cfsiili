@@ -38,10 +38,10 @@ namespace CrossFitSiili.Controllers.Api
         [HttpPost("")]
         public async Task<JsonResult> Post([FromBody] Wod wod)
         {
+            if (wod == null) return Json(false);
 
-           await _wodRepository.AddWod(wod);
+            await _wodRepository.AddWod(wod);
            
-
             return Json(true);
         }
     }
