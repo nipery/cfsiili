@@ -24,7 +24,7 @@ namespace CrossFitSiili.Repository
 
         public async Task<IEnumerable<Wod>> GetWods()
         {
-            return await _context.Wods.OrderBy(t => t.PublishAt).ToListAsync().ConfigureAwait(false);
+            return await _context.Wods.OrderByDescending(t => t.PublishAt).ToListAsync().ConfigureAwait(false);
         }
 
         public async Task<bool> AddWod(Wod wod)
