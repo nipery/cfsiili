@@ -43,7 +43,7 @@ namespace CrossFitSiili.Controllers.Api
                 //  await _wodRepository.AddWod(wod);
             }
             Response.StatusCode = (int)HttpStatusCode.BadRequest;
-            return Json(false);
+            return Json(new {Message = "Failed", ModelState = ModelState});
         }
     }
 }
