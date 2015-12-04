@@ -1,0 +1,1 @@
+c:\niko\code\CrossFitSiili\src\CrossFitSiili>dnx ef migrations add InitialDatabase

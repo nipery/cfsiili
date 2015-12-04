@@ -1,0 +1,5 @@
+{
+  "Data": {
+    "CfSiiliContext": "Server=(localdb)\\ProjectsV12.;Database=CfSiili;Trusted_connection=true;MultipleActiveResultSets=true;"
+  }
+}
