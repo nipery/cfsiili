@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using AutoMapper;
+using CrossFitSiili.Models;
 using CrossFitSiili.Repository;
 using CrossFitSiili.ViewModels;
 using Microsoft.AspNet.Mvc;
@@ -23,7 +27,7 @@ namespace CrossFitSiili.Controllers.Api
         {
             try
             {
-                var wods = await _wodRepository.GetWods();
+                var wods =  Mapper.Map<IEnumerable<WodViewModel>>(await _wodRepository.GetWods()) ;
                 return Json(wods);
             }
             catch (Exception ex)
@@ -38,9 +42,12 @@ namespace CrossFitSiili.Controllers.Api
         {
             if (ModelState.IsValid)
             {
+                var wod = Mapper.Map<Wod>(wodViewModel);
+                
+                var created = await _wodRepository.AddWod(wod);
                 Response.StatusCode = (int)HttpStatusCode.Created;
-                return await Task.FromResult(Json(true));
-                //  await _wodRepository.AddWod(wod);
+
+              
             }
             Response.StatusCode = (int)HttpStatusCode.BadRequest;
             return Json(new {Message = "Failed", ModelState = ModelState});

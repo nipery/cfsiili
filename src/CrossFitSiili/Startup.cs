@@ -1,5 +1,7 @@
-﻿using CrossFitSiili.Models;
+﻿using AutoMapper;
+using CrossFitSiili.Models;
 using CrossFitSiili.Repository;
+using CrossFitSiili.ViewModels;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -43,6 +45,11 @@ namespace CrossFitSiili
         {
 
             app.UseIISPlatformHandler();
+
+            Mapper.Initialize(opt =>
+            {
+                opt.CreateMap<Wod, WodViewModel>().ReverseMap();
+            });
 
             app.UseMvc(config =>
             {
