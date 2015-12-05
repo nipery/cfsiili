@@ -1,28 +1,46 @@
 //app.js
 
-var cfsiili = angular.module('cfApp', ['ngRoute']);
+var cfsiili = angular.module("cfApp", ["ui.router"]);
 
-cfsiili.config(function ($routeProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl: 'pages/main.html',
-            controller: 'mainController'
+cfsiili.config(["$urlRouterProvider", "$stateProvider", function($urlRouterProvider, $stateProvider) {
+
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+        .state("home", {
+            url: "/",
+            templateUrl: "pages/main.html",
+            controller: "mainController"
         })
-        .when('/wod/', {
-            templateUrl: 'pages/wods.html',
-            controller: 'wodController'
-        })
-        .when('/manage/', {
-            templateUrl: 'pages/managementMain.html',
-            controller: 'managementMainController'
-        })
-        .when('/manage/wod', {
-            templateUrl: 'pages/manage/wod.html',
-            controller: 'wodController'
+
+        .state("wod", {
+            url: "/wod",
+            templateUrl: "pages/wods.html",
+            controller: "wodController"
         });
+}]);
+
+//cfsiili.config(function ($routeProvider) {
+//    $routeProvider
+//        .when('/', {
+//            templateUrl: 'pages/main.html',
+//            controller: 'mainController'
+//        })
+//        .when('/wod/', {
+//            templateUrl: 'pages/wods.html',
+//            controller: 'wodController'
+//        })
+//        .when('/manage/', {
+//            templateUrl: 'pages/managementMain.html',
+//            controller: 'managementMainController'
+//        })
+//        .when('/manage/wod', {
+//            templateUrl: 'pages/manage/wod.html',
+//            controller: 'wodController'
+//        });
 
     
-});
+//});
 
 cfsiili.controller('mainController', ['$scope', function ($scope) {
   
@@ -46,6 +64,5 @@ cfsiili.controller('wodController', ['$scope','$http', function ($scope,$http) {
 
     $scope.toggle = function () {
         $scope.isCreating = !$scope.isCreating;
-    }
- 
+    };
 }]);
