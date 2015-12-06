@@ -9,8 +9,8 @@ cfsiili.config(["$urlRouterProvider", "$stateProvider", function($urlRouterProvi
     $stateProvider
         .state("home", {
             url: "/",
-            templateUrl: "pages/main.html",
-            controller: "mainController"
+            templateUrl: "pages/main.html"
+           
         })
 
         .state("wod", {
