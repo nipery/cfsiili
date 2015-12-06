@@ -1,9 +1,9 @@
-//adminController.js
+//bookingCtrl.js
 (function () {
 
     angular
-      .module('app.admin')
-      .controller('adminCtrl', adminCtrl);
+      .module('app.booking')
+      .controller('bookingCtrl', adminCtrl);
 
     adminCtrl.$inject = ['$state', '$http'];
 
@@ -11,6 +11,6 @@
         var vm = this;
 
         vm.wods = [];
-        vm.title = 'Admin controller';    
+        vm.title = 'booking controller';
     }
 })();

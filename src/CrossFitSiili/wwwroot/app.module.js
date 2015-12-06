@@ -8,8 +8,8 @@
 
         'app.core',
         'app.wods',
-        'app.admin'
-        //'app.booking',
+        'app.admin',
+        'app.booking'
         //'app.layout'
 
     ]);
