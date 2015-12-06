@@ -1,3 +1,7 @@
-<div ng-controller="wodCtrl as vm">
-    <h1 class="text-center">{{vm.title}}</h1>
+<div class="container" ng-controller="wodCtrl as vm">
+    <div class="row section topspace">
+        <div ng-repeat="wod in vm.wods">
+            <span>{{wod.title}}: {{wod.description}}</span>
+        </div>
+    </div>
 </div>
