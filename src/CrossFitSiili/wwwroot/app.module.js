@@ -7,8 +7,8 @@
         'ui.router',
 
         'app.core',
-        'app.wods'
-
+        'app.wods',
+        'app.admin'
         //'app.booking',
         //'app.layout'
 
