@@ -33,12 +33,14 @@
         <div id="head" class="parallax" parallax-speed="2">
             <h1 id="logo" class="text-center">
                 <img class="img-circle" src="assets/images/cfsiili_header.png" alt="">
-                <span class="title">CrossFit Siilinjärvi</span>
-                <span class="tagline">
-                    Forging elite sawo
+                <a href="#/home">
+                    <span class="title">CrossFit Siilinjärvi</span>
+                </a>
+                    <span class="tagline">
+                        Forging elite sawo
 
-                </span>
-            </h1>
+                    </span>
+</h1>
         </div>
 
         <nav class="navbar navbar-default navbar-sticky">
@@ -73,7 +75,7 @@
 
     <div id="main" ui-view></div>
 
-    <div ng-include="'layout/footer.html'"></div>
+    <div ng-include="'app/layout/footer.html'"></div>
 
 
     <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
@@ -81,19 +83,19 @@
 
     <script src="assets/js/template.js"></script>
 
-    <script src="app.module.js"></script>
+    <script src="app/app.module.js"></script>
 
-    <script src="core/core.module.js"></script>
-    <script src="core/config.route.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/config.route.js"></script>
 
-    <script src="wods/wod.module.js"></script>
-    <script src="wods/wodctrl.js"></script>
+    <script src="app/wods/wod.module.js"></script>
+    <script src="app/wods/wodctrl.js"></script>
 
-    <script src="admin/admin.module.js"></script>
-    <script src="admin/adminController.js"></script>
+    <script src="app/admin/admin.module.js"></script>
+    <script src="app/admin/adminController.js"></script>
 
-    <script src="booking/booking.module.js"></script>
-    <script src="booking/bookingctrl.js"></script>
+    <script src="app/booking/booking.module.js"></script>
+    <script src="app/booking/bookingctrl.js"></script>
 
 </body>
 </html>
