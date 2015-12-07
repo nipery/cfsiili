@@ -29,6 +29,10 @@
                         templateUrl: 'app/booking/booking.html',
                         controller: 'bookingCtrl',
                         controllerAs: 'vm'
+                    }).state('courses', {
+                        url: '/courses',
+                        templateUrl: 'app/pages/cfCourses.html'
+                        
                     });
 
             }
