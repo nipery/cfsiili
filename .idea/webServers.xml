@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f7ed62ac-5a43-42cb-8c23-0ec49a95df04" name="CIDev" url="http://www.crossfitsiilinjarvi.fi">
+        <fileTransfer host="85.17.21.177" port="21" rootFolder="/public_html/site/" username="pzqphj32">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
