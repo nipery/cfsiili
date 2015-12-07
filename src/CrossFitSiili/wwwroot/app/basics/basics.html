@@ -11,51 +11,26 @@
 
 				<div class="row widget">
 					<div class="col-xs-12">
-						<h4>Seuraavat kurssit</h4>
-                        
-                        <ul>
-                            <li>
-                                On-Ramp #028 (4.1.2016-28.1.2016)
-                                <p>
-                                    8 paikkaa vapaana<br/>
-                                    Harjoitusajat:<br />
-                                    Maanantai klo 20:00-21:00<br />
-                                    Keskiviikko klo 20:00-21:00<br/>
-                                    Torstai klo 20:00-21:00
-                                </p>
-                            </li>
-                            <li>
-                                On-Ramp #029 (1.2.2016-25.2.2016)
-                                <p>
-                                    11 paikkaa vapaana<br/>
-                                    Harjoitusajat:<br />
-                                    Maanantai klo 20:00-21:00<br />
-                                    Keskiviikko klo 20:00-21:00<br />
-                                    Torstai klo 20:00-21:00<br />
-                                </p>
-                            </li>
+						<ul class="list-group">
+                            <li class="list-group-item"><a ui-sref="basics.schedule">Aikataulu</a></li>
+                            <li class="list-group-item"><a ui-sref="basics.prices">Hinnasto</a></li>
+                            <li class="list-group-item"><a ui-sref="basics.rules">Salin säännöt</a></li>
+                            <li class="list-group-item"><a ui-sref="basics.workouts">Millaisia treenit ovat?</a></li>
+                            <li class="list-group-item"><a ui-sref="basics.dict">CrossFit-Suomi sanakirja</a></li>
                         </ul>
 
 					</div>
 				</div>
 				<div class="row widget">
 					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
-					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
-						<p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
+							<p><img src="assets/images/kettlebells_small.jpg" alt=""></p>
 					</div>
 				</div>
 
 			</aside><!-- /Sidebar -->
 
-			<!-- Article main content -->
-            <article class="col-sm-8 maincontent">
+            <div ui-view>
+                <article class="col-sm-8 maincontent">
                 <header class="page-header">
                     <h1 class="page-title">Foundations</h1>
                 </header>
@@ -67,7 +42,11 @@
                     CrossFit On Ramp -kurssi muodostuu kolmesta harjoituskerrasta viikossa ja kestää neljä viikkoa, yhteensä 12 harjoituskertaa. Kurssilla käydään läpi olennaisimmat CrossFit:ssä käytetyt tekniikat ja jokainen harjoituskerta sisältää myös CrossFit-harjoituksen. Jo kuukauden kurssilla kunto- ja voimatasot nousevat aivan varmasti! Kurssi soveltuu kaikille kunto- ja osaamistasosta riippumatta. Kurssin jälkeen on edellytykset osallistua normaaleille CrossFit tunneille.
                 </p>
             </article><!-- /Article -->
-			
+
+            </div>
+
+
+
 
 		</div>
 	</div>	<!-- /container -->

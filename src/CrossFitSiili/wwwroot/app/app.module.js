@@ -9,7 +9,8 @@
         'app.core',
         'app.wods',
         'app.admin',
-        'app.booking'
+        'app.booking',
+        'app.basics'
         //'app.layout'
 
     ]);
