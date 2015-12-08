@@ -14,3 +14,4 @@
         vm.title = 'booking controller';
     }
 })();
+

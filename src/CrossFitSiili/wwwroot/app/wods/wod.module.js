@@ -2,8 +2,8 @@
 
     'use strict';
 
-    angular.module('app.wods', []
+      angular.module('app.wods', []
 
-     );
+    );
 
 })();

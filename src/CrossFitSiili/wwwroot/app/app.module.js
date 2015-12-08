@@ -6,12 +6,12 @@
 
         'ui.router',
 
-        'app.core',
-        'app.wods',
-        'app.admin',
-        'app.booking',
-        'app.basics'
-        //'app.layout'
+    'app.core',
+    'app.wods',
+    'app.admin',
+    'app.booking',
+    'app.basics'
+//'app.layout'
 
-    ]);
+]);
 })();
