@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
     <!-- Bootstrap -->
-    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
@@ -36,10 +37,7 @@
                 <a href="#/home">
                     <span class="title">CrossFit Siilinjärvi</span>
                 </a>
-                    <span class="tagline">
-                        Forging elite sawo
-
-                    </span>
+                    <span class="tagline">Forging elite sawo</span>
             </h1>
         </div>
 
@@ -56,6 +54,7 @@
 
                         <li><a href="#/basics">Aloittaminen</a></li>
                         <li><a href="#/">Ajanvaraus</a></li>
+                        <li><a href="#/shop">Kauppa</a></li>
                         <li class="dropdown">
                             <a href="#/" class="dropdown-toggle" data-toggle="dropdown">Valmentajat <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -83,6 +82,7 @@
 
     <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 
+    <script src="lib/ngcart/dist/ngcart.min.js"></script>
 
     <script src="assets/js/template.js"></script>
 
@@ -100,9 +100,12 @@
     <script src="app/booking/booking.module.js"></script>
     <script src="app/booking/bookingctrl.js"></script>
 
-
     <script src="app/basics/basics.module.js"></script>
     <script src="app/basics/basics.config.route.js"></script>
+
+    <script src="app/shop/shop.module.js"></script>
+    <script src="app/shop/shopctrl.js"></script>
+
 
 </body>
 </html>

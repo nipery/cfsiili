@@ -32,8 +32,13 @@
                     }).state('basics', {
                         url: '/basics',
                         templateUrl: 'app/basics/basics.html'
-                        
-                    });
+
+                    }).state('shop', {
+                        url: '/shop',
+                        templateUrl: 'app/shop/shop.html',
+                        controller: 'shopCtrl',
+                        controllerAs: "vm"
+            });
 
             }
         ]);

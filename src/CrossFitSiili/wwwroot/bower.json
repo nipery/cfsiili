@@ -5,6 +5,8 @@
     "bootstrap": "3.3.6",
     "bootswatch": "3.3.6",
     "angular": "~1.4.8",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "font-awesome": "~4.5.0",
+    "ngcart" : "~1.0.0"
   }
 }

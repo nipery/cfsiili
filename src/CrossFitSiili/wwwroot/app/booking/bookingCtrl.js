@@ -3,11 +3,11 @@
 
     angular
       .module('app.booking')
-      .controller('bookingCtrl', adminCtrl);
+      .controller('bookingCtrl', bookingCtrl);
 
-    adminCtrl.$inject = ['$state', '$http'];
+    bookingCtrl.$inject =['$state', '$http'];
 
-    function adminCtrl($state, $http) {
+    function bookingCtrl($state, $http) {
         var vm = this;
 
         vm.wods = [];
